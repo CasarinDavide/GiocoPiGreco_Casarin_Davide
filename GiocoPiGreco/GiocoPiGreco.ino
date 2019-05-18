@@ -12,6 +12,10 @@ int btn2;
 int btn3;
 int btn4;
 
+// led lcd 
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
 
 // vite e punti
 
@@ -29,6 +33,9 @@ int durataTempo;
 
 void setup() {
   // put your setup code here, to run once:
+
+  // set up del lcd del numero di colonne e di righe:
+  lcd.begin(16, 2);
 
   vite = 4 ;
   punti = 0;
@@ -53,8 +60,27 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-
+  while (vite > 0)
+{
+  
   if (digitalRead(btnStart) == HIGH){
+    
+    // Print le vite ed i punti
+    lcd.print("vite:" + vite + "Punti:" + punti);
+
+    if(casualePiGreco == 0)
+    {
+      
+    }
+    
+    
+    
+    
+    
+    
+    }
+    
+
     
 
     
